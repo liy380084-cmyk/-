@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>热坩埚，慢一步｜实验室安全微视频拍摄脚本</title>
+<style>
+:root{--ink:#202521;--muted:#67716b;--paper:#f5f3ed;--card:#fffefa;--line:#e2dfd5;--orange:#db5b27;--orange2:#fff0e7;--green:#245e49;--green2:#eaf4ee;--red:#a93b31;--red2:#fff0ee;--gold:#d7a443;--shadow:0 14px 38px rgba(31,42,35,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "Segoe UI","Microsoft YaHei",sans-serif}.wrap{max-width:1120px;margin:auto;padding:28px 26px 72px}.hero{position:relative;overflow:hidden;background:#202c27;color:#fff;border-radius:26px;padding:42px 46px 36px;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-68px;top:-115px;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 78px rgba(255,255,255,.025)}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:#f6b58f;font-size:12px;font-weight:800}.hero h1{font-size:clamp(34px,6vw,64px);letter-spacing:.02em;line-height:1.12;margin:13px 0 9px}.hero p{color:#d6dfd8;max-width:690px;margin:0;font-size:17px}.hero-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:23px}.tag{border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.07);border-radius:999px;padding:6px 12px;font-size:13px}.actions{position:absolute;right:34px;bottom:34px;z-index:2}.button{border:0;border-radius:999px;background:#f5b18d;color:#271f1b;font-weight:800;padding:10px 16px;cursor:pointer}.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:24px;margin-top:24px}.nav{align-self:start;position:sticky;top:18px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:var(--shadow)}.nav strong{display:block;font-size:13px;color:var(--muted);margin:0 0 8px}.nav a{display:block;color:var(--ink);text-decoration:none;padding:8px 9px;border-radius:9px;font-size:14px}.nav a:hover{background:var(--orange2);color:var(--orange)}main{min-width:0}.section{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:25px 27px;margin-bottom:19px;box-shadow:var(--shadow);scroll-margin-top:18px}.section h2{margin:0 0 13px;font-size:23px;line-height:1.3}.section h3{font-size:17px;margin:19px 0 7px}.lead{font-size:17px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.fact{padding:14px;border-radius:14px;background:#f6f4ed;border:1px solid var(--line)}.fact b{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.fact span{display:block;font-size:17px;font-weight:750;margin-top:4px}.callout{border-left:4px solid var(--gold);background:#fff8e8;padding:13px 15px;border-radius:0 12px 12px 0;margin:14px 0}.callout.green{border-color:var(--green);background:var(--green2)}.callout.red{border-color:var(--red);background:var(--red2)}.cast{width:100%;border-collapse:collapse;margin-top:8px}.cast th,.cast td{text-align:left;padding:10px 9px;border-bottom:1px solid var(--line);vertical-align:top}.cast th{font-size:12px;color:var(--muted);letter-spacing:.06em}.cast td:first-child{font-weight:800;white-space:nowrap}.timeline{display:grid;gap:13px}.scene{border:1px solid var(--line);border-radius:16px;overflow:hidden}.scene-head{display:flex;gap:13px;align-items:center;padding:14px 17px;background:#f8f6f0;border-bottom:1px solid var(--line)}.time{font-variant-numeric:tabular-nums;font-weight:850;color:var(--orange);min-width:100px}.scene-head h3{margin:0;font-size:17px}.scene-body{padding:15px 17px;display:grid;grid-template-columns:1fr 1fr;gap:18px}.scene-body p{margin:0 0 8px}.scene-body .label{font-size:11px;letter-spacing:.09em;font-weight:900;color:var(--muted);display:block;margin-bottom:4px}.wrong{color:var(--red)}.right{color:var(--green)}.line{padding:10px 12px;border-radius:10px;background:#f5f3ed;margin:8px 0!important}.line em{font-style:normal;font-weight:800;color:#4c5650}.crew{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:9px;margin-top:10px}.pill{display:inline-block;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:800;background:#edf0ec;color:#44544a;margin:2px 4px 2px 0}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.check{padding:12px;border-radius:12px;background:#f5f3ed}.check b{color:var(--green)}ul{padding-left:21px}li{margin:5px 0}.spec{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.spec div{border:1px solid var(--line);border-radius:13px;padding:13px}.spec b{display:block;font-size:13px;color:var(--muted)}.spec span{font-weight:750}.endcard{background:#202c27;color:#fff;border-radius:16px;padding:18px}.endcard p{margin:5px 0;color:#e0e7e1}.footer{text-align:center;color:var(--muted);font-size:12px;padding:8px}.small{font-size:13px}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.nav{position:relative;top:0;display:flex;flex-wrap:wrap;gap:3px}.nav strong{width:100%}.grid{grid-template-columns:1fr}.scene-body{grid-template-columns:1fr}.hero{padding:32px 25px 82px}.actions{left:25px;right:auto;bottom:22px}.spec,.checks{grid-template-columns:1fr}}
+@media print{body{background:#fff;font-size:11pt}.wrap{max-width:none;padding:0}.hero,.section,.nav{box-shadow:none}.hero{border-radius:0;padding:22px 26px}.layout{display:block;margin-top:12px}.nav,.actions{display:none}.section{break-inside:avoid;padding:16px;margin-bottom:12px}.scene{break-inside:avoid}.scene-body{gap:10px}.footer{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">METALLURGY LAB · SAFETY SHORT FILM</div>
+  <h1>热坩埚，慢一步</h1>
+  <p>冶金实验室高温熔融安全微视频拍摄脚本。用一次“遇湿险情”和一次“搬运险情”，把样品、夹具、路线、落点拍清楚。</p>
+  <div class="hero-tags"><span class="tag">建议选题：坩埚熔融与热坩埚搬运</span><span class="tag">9人全员出镜</span><span class="tag">成片约2分50秒</span><span class="tag">正确 / 错误示范对照</span></div>
+  <div class="actions"><button class="button" onclick="window.print()">打印 / 保存为 PDF</button></div>
+</header>
+<div class="layout">
+<nav class="nav"><strong>脚本导航</strong><a href="#brief">选题与设定</a><a href="#cast">9人分工</a><a href="#script">分镜与台词</a><a href="#safety">拍摄安全</a><a href="#delivery">封面与交付</a></nav>
+<main>
+<section class="section" id="brief">
+<h2>选题与设定</h2>
+<p class="lead"><b>推荐主题：坩埚熔融实验中的遇湿喷溅与热坩埚搬运。</b>切口聚焦冶金实验室真实动作，不泛讲“注意安全”。标题共7个汉字（含标点），符合≤15字要求。</p>
+<div class="grid">
+  <div class="fact"><b>类型</b><span>安全情境短片</span></div><div class="fact"><b>预计时长</b><span>2分50秒</span></div><div class="fact"><b>场景</b><span>马弗炉 / 熔融操作区</span></div>
+</div>
+<div class="callout"><b>选题查重：</b>先把“熔融物遇湿 + 热坩埚转运”报给班长确认。若班里已有相近选题，可把题目收窄为“热坩埚转运险情与正确夹持”，避免与笼统的“实验室高温安全”撞题。</div>
+<p class="small muted">案例说明：脚本中的两个险情按高温熔融实验中常见、真实存在的事故机理编排；不冒称本校具体事故。若老师要求引用可核验的真实个案，请用导师或实验室安全员确认过的公开案例替换，并在片尾标出处，不编造时间、地点或伤者信息。</p>
+</section>
+<section class="section" id="cast">
+<h2>9人分工（保证每人有清楚的出镜点）</h2>
+<table class="cast"><thead><tr><th>成员</th><th>片中角色</th><th>出镜 / 台词任务</th></tr></thead><tbody>
+<tr><td>成员1</td><td>炉前操作员</td><td>开场提出取坩埚；正确示范按本室SOP确认取样条件。</td></tr>
+<tr><td>成员2</td><td>着急的操作者</td><td>错误示范主角；说“戴手套就够了”，之后接受同伴制止。</td></tr>
+<tr><td>成员3</td><td>同伴提醒者</td><td>叫停错误动作；说清楚面屏、合适夹钳和干燥落点。</td></tr>
+<tr><td>成员4</td><td>安全讲述者</td><td>串场旁白；解释水遇熔融金属会快速汽化并引发喷溅。</td></tr>
+<tr><td>成员5</td><td>样品准备者</td><td>呈现“样品刚清洗、可能带水”的投料险情。</td></tr>
+<tr><td>成员6</td><td>坩埚搬运者</td><td>呈现夹持和转运动作；正确示范缓慢、稳定搬运。</td></tr>
+<tr><td>成员7</td><td>路线观察员</td><td>清理并确认通道，划定周边避让范围，沿途监护。</td></tr>
+<tr><td>成员8</td><td>事故复盘员</td><td>用定格 / 回放说明第二个险情：夹持偏斜、路线受阻。</td></tr>
+<tr><td>成员9</td><td>现场联络员</td><td>展示暂停、提醒撤离、报告老师 / 安全员的处置；带领结尾。</td></tr>
+</tbody></table>
+<p class="small muted">拍摄清单：每位成员至少有一个可辨认的正面或半身镜头；结尾全员同框。可在片尾字幕列出全体主创姓名与分工。</p>
+</section>
+<section class="section" id="script">
+<h2>分镜与拍摄台词</h2>
+<p class="muted">时间码为剪辑目标，台词可按实际语速微调；剪完总时长控制在3分钟以内。</p>
+<div class="timeline">
+<article class="scene">
+<div class="scene-head"><span class="time">00:00–00:13</span><h3>开场：炉温到了，要不要马上拿？</h3></div>
+<div class="scene-body"><div><span class="label">画面 / 声音</span><p>中景：炉前操作员看一眼炉子，旁边同学抱着坩埚钳靠近。屏幕短暂定格，切标题《热坩埚，慢一步》。</p><p class="line"><em>成员1：</em>“到取样时间了，先把坩埚拿出来。”</p><p class="line"><em>成员2：</em>“我戴着手套，直接夹就行吧？”</p></div><div><span class="label">导演提示</span><p>不用点燃设备或打开热炉。用冷炉、关机炉和空坩埚取景；炉温数字可后期叠字模拟。</p><div class="crew"><b>出镜：</b>成员1、2、4（旁白/标题）</div></div></div>
+</article>
+<article class="scene">
+<div class="scene-head"><span class="time">00:13–00:36</span><h3>错误示范一：只戴手套，短钳探炉口</h3></div>
+<div class="scene-body"><div><span class="label wrong">错误镜头（冷态摆拍）</span><p>成员2只戴普通手套，拿不匹配的短钳，身体探向炉口；同伴喊停，画面定格并出现红色“×”。不做真实高温操作。</p><p class="line"><em>成员3：</em>“停！护目镜外还要按规程戴面屏；夹钳得适配坩埚，别探身硬夹。”</p></div><div><span class="label">旁白 / 正确点</span><p class="line"><em>成员4旁白：</em>“炉膛、坩埚和夹具都可能造成严重烫伤。手套不能替代面部防护，夹持不稳就可能失手。”</p><p>快速切到正确着装：护目镜加面屏、完整干燥的耐热手套、实验室规定的防护服和包脚鞋。具体装备以本室SOP为准。</p><div class="crew"><b>出镜：</b>成员2、3、4</div></div></div>
+</article>
+<article class="scene">
+<div class="scene-head"><span class="time">00:36–01:01</span><h3>正确示范：先查条件，再动手</h3></div>
+<div class="scene-body"><div><span class="label right">正确镜头</span><p>成员1对照本室SOP和实验记录，确认允许取样的温度 / 开炉条件；成员3检查干燥、适配的专用夹钳与耐火承接位；成员7清出通道并做监护。</p><p class="line"><em>成员1：</em>“取样温度和开炉条件先按本室SOP确认，不凭经验猜。”</p><p class="line"><em>成员3：</em>“面屏、夹钳、落点和路线都确认了，再开始。”</p></div><div><span class="label">镜头重点</span><p>给夹钳夹口、坩埚承接位、无障碍通道各一个近景。搬运演示全程使用空的冷坩埚。</p><div class="crew"><b>出镜：</b>成员1、3、7</div></div></div>
+</article>
+<article class="scene">
+<div class="scene-head"><span class="time">01:01–01:34</span><h3>险情一：带水样品靠近熔融金属</h3></div>
+<div class="scene-body"><div><span class="label wrong">险情还原（不接触熔体）</span><p>成员5拿着标记为“刚清洗 / 干燥状态不明”的样品走向投料区。成员2准备接过，成员3立即抬手叫停。用红色闪切表现“如果投下去会怎样”，绝不真的投料、泼水或制造喷溅。</p><p class="line"><em>成员5：</em>“样品刚洗过，表面看着差不多干了。”</p><p class="line"><em>成员3：</em>“先停。干燥状态不明的样品不能进熔体。”</p></div><div><span class="label">事故机理 / 正确处置</span><p class="line"><em>成员4旁白：</em>“水接触熔融金属会迅速汽化、急剧膨胀，可能把金属液喷出，造成烫伤。”</p><p>正确做法：确认样品、坩埚和工具无水；需干燥或预热时，只按经批准的实验方法和SOP处理。状态不明就隔离、询问，不投料。</p><div class="crew"><b>出镜：</b>成员5、2、3、4</div></div></div>
+</article>
+<article class="scene">
+<div class="scene-head"><span class="time">01:34–02:07</span><h3>险情二：夹持偏斜，通道还有障碍物</h3></div>
+<div class="scene-body"><div><span class="label wrong">错误镜头（空坩埚摆拍）</span><p>成员6用不合适的夹钳夹一只空冷坩埚，成员7指出路边有纸箱 / 杂物。模拟夹口偏斜后立即定格，不让坩埚掉落；用音效表现“险些失手”。</p><p class="line"><em>成员8复盘：</em>“夹具不合、路线受阻，碰撞时坩埚可能倾斜，热物料会烫伤本人和旁人。”</p></div><div><span class="label right">正确镜头</span><p>成员7清出路线并提醒旁人退到警戒线外；成员6先用空冷坩埚检查夹持配合，再双手稳夹、平稳短距离转运，放到干燥、稳定的专用耐火承接位。不跨越他人，不急转、不奔跑。</p><p class="line"><em>成员7：</em>“通道清了，落点干燥稳定；我在旁边看路。”</p><div class="crew"><b>出镜：</b>成员6、7、8</div></div></div>
+</article>
+<article class="scene">
+<div class="scene-head"><span class="time">02:07–02:31</span><h3>一旦出险：先停、提醒、报告</h3></div>
+<div class="scene-body"><div><span class="label">画面 / 台词</span><p>全员停止动作，成员9示意周围人退开并联系指导教师 / 实验室安全员。镜头切到应急联系卡和实验室应急预案位置。</p><p class="line"><em>成员9：</em>“先停操作、提醒周围人避开，按实验室预案报告。有人受伤，马上启动校内急救流程。”</p></div><div><span class="label">屏幕提示</span><p>“不围观、不自行清理熔融物、不泼水、不徒手拾取。”能量切断仅在安全且符合本室预案时进行。按现场应急预案处理。</p><div class="crew"><b>出镜：</b>成员9、全组背景</div></div></div>
+</article>
+<article class="scene">
+<div class="scene-head"><span class="time">02:31–02:50</span><h3>收束：四项确认，全员出镜</h3></div>
+<div class="scene-body"><div><span class="label">全员同框 / 轮流一句</span><p class="line"><em>成员1、5：</em>“样品和工具，确认干燥！”</p><p class="line"><em>成员2、3、6：</em>“防护到位，夹持稳定！”</p><p class="line"><em>成员7、8：</em>“路线清楚，落点可靠！”</p><p class="line"><em>成员9带全组：</em>“不确定，先停手，再问老师或安全员。”</p></div><div><span class="label">片尾字卡</span><div class="endcard"><p><b>干燥 · 夹稳 · 清路 · 稳放</b></p><p>主创：9位组员姓名</p><p>指导教师：教师姓名</p></div><p class="small muted">姓名以最终名单为准。可加课程 / 班级；不要把演绎情境写成真实事故报道。</p></div></div>
+</article>
+</div>
+</section>
+<section class="section" id="safety">
+<h2>拍摄安全控制</h2>
+<div class="callout red"><b>所有错误示范只拍冷态摆拍。</b>不使用真实熔融金属，不把水或潮湿物放到热设备附近，不真的失手、倾倒或制造喷溅。涉及炉门的镜头只用冷却、断能并按实验室规定确认安全的设备；无法确认时用空镜加后期画面替代。</div>
+<div class="checks">
+<div class="check"><b>道具</b><br>空的冷坩埚、冷炉、合适夹钳、标注“状态不明”的干燥样品道具、胶带警戒线。</div>
+<div class="check"><b>拍摄前</b><br>向实验室负责人报备；清走真实实验材料；确认电源 / 气源按场地要求处于安全状态。</div>
+<div class="check"><b>危险镜头</b><br>用停格、红色闪切、音效和字幕表现后果，不靠真的危险动作完成画面。</div>
+<div class="check"><b>信息准确</b><br>装备、温度、开炉、干燥 / 预热和应急流程以本实验室SOP及指导教师要求为准。</div>
+</div>
+</section>
+<section class="section" id="delivery">
+<h2>封面与交付检查</h2>
+<div class="spec">
+<div><b>标题（≤15字）</b><span>热坩埚，慢一步</span></div>
+<div><b>封面必须标注</b><span>主创：组员姓名；指导教师：教师姓名</span></div>
+<div><b>视频</b><span>MP4 · 1080P · 目标时长2:50内</span></div>
+<div><b>音频 + 脚本</b><span>MP3 · 48000 Hz · 128 kbit/s；附本页文字脚本</span></div>
+</div>
+<div class="callout"><b>码率与文件大小需要向老师确认：</b>25 Mbit/s 连续编码3分钟，视频约562.5 MB（尚未计音频和封装），会超过300 MB。若“≤300 MB”是硬上限，3分钟成片总码率需约13.3 Mbit/s以下；若25 Mbit/s是硬性要求，时长需约96秒以内。请班长确认优先执行哪项后再导出。</div>
+<h3>建议导出前核对</h3>
+<ul><li>9名组员都在正片中出镜，片尾全员同框，主创姓名齐全。</li><li>封面标题不超过15字，并注明主创和指导教师。</li><li>全片时长小于180秒；MP4画面为1080P。</li><li>单独导出MP3，采样率48000 Hz、码率128 kbit/s，并随片提交文字脚本。</li><li>班长收齐视频、音频、脚本和封面，再统一提交。</li></ul>
+</section>
+<div class="footer">实验室安全短视频 · 拍摄脚本网页 · 可打印 / 保存为 PDF</div>
+</main>
+</div>
+</div>
+</body>
+</html>
+
